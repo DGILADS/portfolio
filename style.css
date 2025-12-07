@@ -1,0 +1,147 @@
+/* ============================ */
+/*        ROOT & FONTS         */
+/* ============================ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root{
+  --bg:#0b0c0f;
+  --panel:#0f1114;
+  --muted:#9aa0a6;
+  --accent:#dd0b0e;
+  --white:#ffffff;
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  --max-w: 1200px;
+  --gap: 24px;
+  --shadow: 0 8px 30px rgba(2,6,23,0.6);
+  --glass-blur: blur(6px);
+  --brand-font: "Roboto Condensed", sans-serif;
+  --text-font: "Roboto", sans-serif;
+}
+
+/* reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:var(--text-font);
+  background: linear-gradient(180deg,#050506 0%, #0b0c0f 100%);
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* layout container helper */
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+
+/* ============================ */
+/*        HEADER / NAV         */
+/* ============================ */
+.header{
+  position:fixed;left:0;top:0;width:100%;
+  z-index:1000;
+  padding:18px 0;
+  background: linear-gradient(180deg, rgba(11,12,15,0.24), rgba(11,12,15,0.10));
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-w);margin:0 auto;padding:0 20px}
+.logo{font-family:var(--brand-font);font-size:20px;font-weight:700;letter-spacing:1px;color:var(--white)}
+.logo span{color:var(--accent)}
+.nav{display:flex;gap:20px}
+.nav a{color:var(--muted);text-decoration:none;font-family:var(--brand-font);font-size:14px;padding:8px 12px;border-radius:8px;transition:all .18s}
+.nav a:hover{color:var(--white);background:rgba(255,255,255,0.02)}
+
+/* compensate header height for page flow */
+.header-placeholder{height:72px}
+
+/* ============================ */
+/*           HERO (PARALLAX)    */
+/* ============================ */
+.hero{
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  background-image: url("assets/img/IMG_0983.PNG");
+  background-position:center;
+  background-size:cover;
+  background-attachment: fixed; /* parallax effect (desktop) */
+}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(2,6,23,0.55) 0%, rgba(2,6,23,0.65) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:var(--max-w);margin:0 auto;display:flex;gap:40px;padding:80px 20px;align-items:center;justify-content:space-between}
+.hero-left{flex:1;max-width:640px}
+.hero-left h1{font-family:var(--brand-font);font-size:44px;margin-bottom:12px}
+.subtitle{color:var(--muted);margin-bottom:8px}
+.quick{color:var(--muted);margin-bottom:20px}
+.btn{display:inline-block;padding:12px 22px;background:var(--accent);color:var(--white);text-decoration:none;border-radius:10px;font-weight:700;letter-spacing:0.6px;transition:transform .18s}
+.btn:hover{transform:translateY(-3px)}
+.hero-right{width:220px;flex-shrink:0}
+.portrait{width:220px;height:220px;object-fit:cover;border-radius:14px;border:4px solid rgba(255,255,255,0.06);box-shadow:var(--shadow)}
+
+/* ============================ */
+/*        ABOUT SECTION         */
+/* ============================ */
+.section{padding:70px 0;background:transparent}
+.about-grid{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.about-photo img{width:420px;border-radius:var(--radius);box-shadow:var(--shadow);display:block}
+.about-text h2{font-family:var(--brand-font);font-size:28px;margin-bottom:12px}
+.about-text p{color:var(--muted);margin-bottom:12px}
+.btn-outline{display:inline-block;padding:10px 18px;border-radius:10px;color:var(--white);border:1px solid rgba(255,255,255,0.06);text-decoration:none}
+
+/* ============================ */
+/*         SKILLS GRID         */
+/* ============================ */
+.skills .section-title{font-family:var(--brand-font);font-size:28px;margin-bottom:18px;text-align:center}
+.skills-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+.skill-card{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;width:320px;box-shadow: 0 6px 24px rgba(0,0,0,0.6)}
+.skill-card h3{font-family:var(--brand-font);margin-bottom:12px}
+.skill-card ul{list-style: none;padding-left:0;color:var(--muted)}
+.skill-card li{margin-bottom:8px}
+
+/* ============================ */
+/*       PROJECTS / CARDS      */
+/* ============================ */
+.projects .section-title{font-size:28px;margin-bottom:20px;text-align:center}
+.projects-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center}
+.project{background:var(--panel);border-radius:14px;overflow:hidden;width:340px;box-shadow:var(--shadow);transition:transform .22s}
+.project img{width:100%;height:180px;object-fit:cover;display:block}
+.project-body{padding:16px}
+.project h3{font-family:var(--brand-font);margin-bottom:8px}
+.project p{color:var(--muted);margin-bottom:12px}
+.link{color:var(--accent);text-decoration:none;font-weight:700}
+
+/* ============================ */
+/*         CONTACT AREA         */
+/* ============================ */
+.contact-grid{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.contact-card{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;width:360px;box-shadow:var(--shadow)}
+.contact-card h3{font-family:var(--brand-font);margin-bottom:8px}
+.contact-card a{color:var(--accent);text-decoration:none}
+
+/* ============================ */
+/*         FOOTER              */
+/* ============================ */
+.footer{padding:24px 0;background:transparent;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.02)}
+
+/* ============================ */
+/*         RESPONSVIE          */
+/* ============================ */
+@media (max-width: 1000px){
+  .hero-inner{flex-direction:column;align-items:flex-start;padding:60px 20px}
+  .hero-right{width:180px}
+  .portrait{width:180px;height:180px}
+  .about-photo img{width:320px}
+  .about-grid{gap:24px}
+}
+@media (max-width: 720px){
+  .nav{display:none} /* simples mobile: ocultar links, pode trocar por hamburger depois */
+  .hero-left h1{font-size:34px}
+  .hero-right{width:160px}
+  .portrait{width:160px;height:160px}
+  .about-photo img{width:260px}
+  .skill-card{width:100%}
+  .project{width:100%}
+  .contact-card{width:100%}
+  .hero{background-attachment:scroll} /* fallback mobile */
+}
