@@ -358,20 +358,52 @@ body{
 /*         RESPONSVIE          */
 /* ============================ */
 @media (max-width: 1000px){
-  .hero-inner{flex-direction:column;align-items:flex-start;padding:60px 20px}
-  .hero-right{width:180px}
-  .portrait{width:180px;height:180px}
-  .about-photo img{width:320px}
-  .about-grid{gap:24px}
+  .hero-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:60px 20px;
+}
+  .hero-right{
+    width:180px;
+}
+  .portrait{
+    width:180px;
+    height:180px;
+}
+  .about-photo img{
+    width:320px;
+}
+  .about-grid{
+    gap:24px;
+}
 }
 @media (max-width: 720px){
-  .nav{display:none} /* simples mobile: ocultar links, pode trocar por hamburger depois */
-  .hero-left h1{font-size:34px}
-  .hero-right{width:160px}
-  .portrait{width:160px;height:160px}
-  .about-photo img{width:260px}
-  .skill-card{width:100%}
-  .project{width:100%}
-  .contact-card{width:100%}
-  .hero{background-attachment:scroll} /* fallback mobile */
+  .nav{
+    display:none; /* simples mobile: ocultar links, pode trocar por hamburger depois */
+} 
+  .hero-left h1{
+    font-size:34px;
+}
+  .hero-right{
+    width:160px;
+}
+  .portrait{
+    width:160px;
+    height:160px;
+}
+  .about-photo img{
+    width:260px;
+}
+  .skill-card{
+    width:100%;
+}
+  .project{
+    width:100%;
+}
+  .contact-card{
+    width:100%;
+}
+  .hero{
+    background-attachment:scroll;/* fallback mobile */
+} 
 }
