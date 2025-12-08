@@ -72,7 +72,8 @@ Este projeto permitiu consolidar conhecimentos sobre:
 1. Baixe ou clone o repositório.
 2. Abra o arquivo index.html diretamente no navegador.
 3. Não é necessário servidor local ou instalação adicional, pois se trata de um projeto estático.
+4. Abra a page direto com link abaixo.
 
 ## 10. Link do Projeto
 Insira aqui o link após publicá-lo:
-https://github.com/usuario/repositorio
+https://dgilads.github.io/portfolio/
