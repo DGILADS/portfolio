@@ -65,7 +65,7 @@ Este projeto permitiu consolidar conhecimentos sobre:
 - Documentação profissional com Markdown.
 
 ## 8. Status do Projeto
-- Projeto concluído.
+- Projeto em andamento.
 - Aberto para melhorias e expansão futura.
 
 ## 9. Como Executar
