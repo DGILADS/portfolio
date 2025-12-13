@@ -466,3 +466,22 @@ body{
     background-attachment:scroll;/* fallback mobile */
 } 
 }
+/* ============================= */
+/*         MAX WIDTH CENTER      */
+/* ============================= */
+
+:root {
+  --max-w: 1440px; /* ou 1600px, se quiser */
+}
+
+@media (min-width: 1920px){
+  .container, .hero-inner, .header-inner {
+    max-width: 1600px;
+  }
+}
+
+@media (min-width: 2560px){
+  .container, .hero-inner, .header-inner {
+    max-width: 1920px;
+  }
+}
