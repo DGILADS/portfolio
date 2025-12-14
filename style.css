@@ -303,6 +303,43 @@ body{
     gap:18px;
     justify-content:center;
 }
+
+.skill-icons{
+    display: flex;
+    margin-bottom: 18px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-icons .skill-icon{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+
+    
+
+    opacity: 0.85;
+
+    transition: 
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.skill-icons .skill-icon:hover{
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+@media (max-width: 480px){
+    .skill-icons .skill-icon{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
 .skill-card{
     background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;
     border-radius:12px;
