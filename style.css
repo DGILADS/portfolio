@@ -484,8 +484,18 @@ body{
     display:none; /* simples mobile: ocultar links, pode trocar por hamburger depois */
 } 
   .hero-left h1{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     font-size:34px;
 }
+  .btn{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   .hero-right{
     width:160px;
 }
