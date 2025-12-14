@@ -166,7 +166,7 @@ body{
 /*           HERO (PARALLAX)    */
 /* ============================ */
 .hero{
-  min-height:72vh;
+  min-height:100vh;
   display:flex;
   align-items:center;
   position:relative;
@@ -383,6 +383,12 @@ body{
     justify-content:center;
 }
 
+.contact .section-title{
+    font-family:var(--brand-font);
+    font-size:28px;
+    margin-bottom:18px;
+    text-align:center;
+}
 .contact-card{
     background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;
     border-radius:12px;
