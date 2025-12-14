@@ -98,6 +98,65 @@ body{
     background:rgba(255,255,255,0.02);
 }
 
+/* =============================== */
+/*   HAMBURGUER MENU MOBILE       */
+/* =============================== */
+
+.nav-toggle {
+  display:none;
+  background:none;
+  border:none;
+  cursor:pointer;
+  width:32px;
+  height:24px;
+  position:relative;
+}
+
+.nav-toggle span {
+  position:absolute;
+  left:0;
+  right:0;
+  height:3px;
+  border-radius:2px;
+  background:var(--white);
+  transition:transform .2s ease, top .2s ease, opacity .2s ease;
+}
+
+.nav-toggle span:nth-child(1) { top:0; }
+.nav-toggle span:nth-child(2) { top:10px; }
+.nav-toggle span:nth-child(3) { top:20px; }
+
+/* estado aberto */
+.nav-toggle.is-open span:nth-child(1) {
+  top:10px;
+  transform:rotate(45deg);
+}
+.nav-toggle.is-open span:nth-child(2) {
+  opacity:0;
+}
+.nav-toggle.is-open span:nth-child(3) {
+  top:10px;
+  transform:rotate(-45deg);
+}
+
+/* mobile */
+@media (max-width: 720px){
+  .nav-toggle { display:block; }
+  .nav {
+    display:none;
+    position:absolute;
+    right:20px;
+    top:64px;
+    flex-direction:column;
+    background:var(--panel);
+    padding:12px;
+    border-radius:10px;
+    box-shadow:var(--shadow);
+  }
+  .nav.is-open { display:flex; }
+}
+
+
 /* compensate header height for page flow */
 .header-placeholder{
     height:72px;
@@ -107,7 +166,7 @@ body{
 /*           HERO (PARALLAX)    */
 /* ============================ */
 .hero{
-  min-height:72vh;
+  min-height:100vh;
   display:flex;
   align-items:center;
   position:relative;
@@ -324,6 +383,12 @@ body{
     justify-content:center;
 }
 
+.contact .section-title{
+    font-family:var(--brand-font);
+    font-size:28px;
+    margin-bottom:18px;
+    text-align:center;
+}
 .contact-card{
     background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;
     border-radius:12px;
@@ -358,20 +423,71 @@ body{
 /*         RESPONSVIE          */
 /* ============================ */
 @media (max-width: 1000px){
-  .hero-inner{flex-direction:column;align-items:flex-start;padding:60px 20px}
-  .hero-right{width:180px}
-  .portrait{width:180px;height:180px}
-  .about-photo img{width:320px}
-  .about-grid{gap:24px}
+  .hero-inner{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:60px 20px;
+}
+  .hero-right{
+    width:180px;
+}
+  .portrait{
+    width:180px;
+    height:180px;
+}
+  .about-photo img{
+    width:320px;
+}
+  .about-grid{
+    gap:24px;
+}
 }
 @media (max-width: 720px){
-  .nav{display:none} /* simples mobile: ocultar links, pode trocar por hamburger depois */
-  .hero-left h1{font-size:34px}
-  .hero-right{width:160px}
-  .portrait{width:160px;height:160px}
-  .about-photo img{width:260px}
-  .skill-card{width:100%}
-  .project{width:100%}
-  .contact-card{width:100%}
-  .hero{background-attachment:scroll} /* fallback mobile */
+  .nav{
+    display:none; /* simples mobile: ocultar links, pode trocar por hamburger depois */
+} 
+  .hero-left h1{
+    font-size:34px;
+}
+  .hero-right{
+    width:160px;
+}
+  .portrait{
+    width:160px;
+    height:160px;
+}
+  .about-photo img{
+    width:260px;
+}
+  .skill-card{
+    width:100%;
+}
+  .project{
+    width:100%;
+}
+  .contact-card{
+    width:100%;
+}
+  .hero{
+    background-attachment:scroll;/* fallback mobile */
+} 
+}
+/* ============================= */
+/*         MAX WIDTH CENTER      */
+/* ============================= */
+
+:root {
+  --max-w: 1440px; /* ou 1600px, se quiser */
+}
+
+@media (min-width: 1920px){
+  .container, .hero-inner, .header-inner {
+    max-width: 1600px;
+  }
+}
+
+@media (min-width: 2560px){
+  .container, .hero-inner, .header-inner {
+    max-width: 1920px;
+  }
 }
