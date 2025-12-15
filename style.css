@@ -243,6 +243,73 @@ body{
     box-shadow:var(--shadow);
 }
 
+/* ============================ */
+/*        HERO ANIMATION        */       
+/* ============================ */
+
+
+
+.hero-right{
+    animation: fadeHeroRight;
+    animation-timeline: view();
+}
+
+@keyframes fadeHeroRight {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+    }60% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translate(0px, 0px);
+    }100% {
+        opacity: 0;
+        filter: blur(30px);
+        transform: translate(300px, 200px);
+    }
+}
+
+.about-photo img{
+    animation: transformAboutPhoto;
+    animation-timeline: view();
+}
+
+@keyframes transformAboutPhoto {
+    0% {
+        
+        
+        transform: translate(0px, 0px);
+    }100% {
+       
+       
+        transform: translate(1000px, -10px);
+    }
+}
+
+/* ============================ */
+/*        ABOUT ANIMATION        */       
+/* ============================ */
+
+.about-text h2{
+    animation: fadeAboutText;
+    animation-timeline: view();
+}
+
+@keyframes fadeAboutText {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+    }30%,70% {
+        opacity: 1;
+        filter: blur(0px);
+        
+    }100% {
+        opacity: 0;
+        filter: blur(30px);
+        
+    }
+}
+
 
 /* ============================ */
 /*        ABOUT SECTION         */
@@ -503,6 +570,73 @@ body{
     width:160px;
     height:160px;
 }
+
+/* ============================ */
+/*        HERO ANIMATION        */       
+/* ============================ */
+
+
+
+.hero-right{
+    animation: fadeHeroRight;
+    animation-timeline: view();
+}
+
+@keyframes fadeHeroRight {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+    }40%, 60% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translate(110px, -10px);
+    }100% {
+        opacity: 0;
+        filter: blur(30px);
+        transform: translate(-200px, 0px);
+    }
+}
+
+.about-photo img{
+    animation: transformAboutPhoto;
+    animation-timeline: view();
+}
+
+@keyframes transformAboutPhoto {
+    0% {
+        
+        
+        transform: translate(-300px, 0px);
+    }100% {
+       
+       
+        transform: translate(300px, -10px);
+    }
+}
+
+/* ============================ */
+/*        ABOUT ANIMATION        */       
+/* ============================
+
+.about-text h2{
+    animation: fadeAboutText;
+    animation-timeline: view();
+}
+
+@keyframes fadeAboutText {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+    }40%,60% {
+        opacity: 1;
+        filter: blur(0px);
+        
+    }100% {
+        opacity: 0;
+        filter: blur(30px);
+        
+    }
+} */
   .about-photo img{
     width:260px;
 }
@@ -533,8 +667,42 @@ body{
   }
 }
 
+.about-photo img{
+    animation: transformAboutPhoto;
+    animation-timeline: view();
+}
+
+@keyframes transformAboutPhoto {
+    0% {
+        
+        
+        transform: translate(0px, 0px);
+    }100% {
+       
+       
+        transform: translate(1980px, -10px);
+    }
+}
+
 @media (min-width: 2560px){
   .container, .hero-inner, .header-inner {
     max-width: 1920px;
   }
+}
+
+.about-photo img{
+    animation: transformAboutPhoto;
+    animation-timeline: view();
+}
+
+@keyframes transformAboutPhoto {
+    0% {
+        
+        
+        transform: translate(0px, 0px);
+    }100% {
+       
+       
+        transform: translate(2560px, -10px);
+    }
 }
