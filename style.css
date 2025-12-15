@@ -243,6 +243,73 @@ body{
     box-shadow:var(--shadow);
 }
 
+/* ============================ */
+/*        HERO ANIMATION        */       
+/* ============================ */
+
+
+
+.hero-right{
+    animation: fadeHeroRight;
+    animation-timeline: view();
+}
+
+@keyframes fadeHeroRight {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+    }60% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translate(0px, 0px);
+    }100% {
+        opacity: 0;
+        filter: blur(30px);
+        transform: translate(300px, 200px);
+    }
+}
+
+.about-photo img{
+    animation: transformAboutPhoto;
+    animation-timeline: view();
+}
+
+@keyframes transformAboutPhoto {
+    0% {
+        
+        
+        transform: translate(0px, 0px);
+    }100% {
+       
+       
+        transform: translate(1000px, -10px);
+    }
+}
+
+/* ============================ */
+/*        ABOUT ANIMATION        */       
+/* ============================ */
+
+.about-text h2{
+    animation: fadeAboutText;
+    animation-timeline: view();
+}
+
+@keyframes fadeAboutText {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+    }30%,70% {
+        opacity: 1;
+        filter: blur(0px);
+        
+    }100% {
+        opacity: 0;
+        filter: blur(30px);
+        
+    }
+}
+
 
 /* ============================ */
 /*        ABOUT SECTION         */
@@ -303,6 +370,43 @@ body{
     gap:18px;
     justify-content:center;
 }
+
+.skill-icons{
+    display: flex;
+    margin-bottom: 18px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-icons .skill-icon{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+
+    
+
+    opacity: 0.85;
+
+    transition: 
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.skill-icons .skill-icon:hover{
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+@media (max-width: 480px){
+    .skill-icons .skill-icon{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
 .skill-card{
     background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;
     border-radius:12px;
@@ -447,8 +551,18 @@ body{
     display:none; /* simples mobile: ocultar links, pode trocar por hamburger depois */
 } 
   .hero-left h1{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     font-size:34px;
 }
+  .btn{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   .hero-right{
     width:160px;
 }
@@ -456,6 +570,73 @@ body{
     width:160px;
     height:160px;
 }
+
+/* ============================ */
+/*        HERO ANIMATION        */       
+/* ============================ */
+
+
+
+.hero-right{
+    animation: fadeHeroRight;
+    animation-timeline: view();
+}
+
+@keyframes fadeHeroRight {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+    }40%, 60% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translate(110px, -10px);
+    }100% {
+        opacity: 0;
+        filter: blur(30px);
+        transform: translate(-200px, 0px);
+    }
+}
+
+.about-photo img{
+    animation: transformAboutPhoto;
+    animation-timeline: view();
+}
+
+@keyframes transformAboutPhoto {
+    0% {
+        
+        
+        transform: translate(-300px, 0px);
+    }100% {
+       
+       
+        transform: translate(300px, -10px);
+    }
+}
+
+/* ============================ */
+/*        ABOUT ANIMATION        */       
+/* ============================
+
+.about-text h2{
+    animation: fadeAboutText;
+    animation-timeline: view();
+}
+
+@keyframes fadeAboutText {
+    0% {
+        opacity: 0;
+        filter: blur(30px);
+    }40%,60% {
+        opacity: 1;
+        filter: blur(0px);
+        
+    }100% {
+        opacity: 0;
+        filter: blur(30px);
+        
+    }
+} */
   .about-photo img{
     width:260px;
 }
@@ -486,8 +667,42 @@ body{
   }
 }
 
+/* .about-photo img{
+    animation: transformAboutPhoto;
+    animation-timeline: view();
+}
+
+@keyframes transformAboutPhoto {
+    00% {
+        
+        
+        transform: translate(-700px, 0px);
+    }100% {
+       
+       
+        transform: translate(1980px, -10px);
+    }
+} */
+
 @media (min-width: 2560px){
   .container, .hero-inner, .header-inner {
     max-width: 1920px;
   }
 }
+
+/* .about-photo img{
+    animation: transformAboutPhoto;
+    animation-timeline: view();
+}
+
+@keyframes transformAboutPhoto {
+    0% {
+        
+        
+        transform: translate(0px, 0px);
+    }100% {
+       
+       
+        transform: translate(2560px, -10px);
+    }
+} */
