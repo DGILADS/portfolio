@@ -667,22 +667,22 @@ body{
   }
 }
 
-.about-photo img{
+/* .about-photo img{
     animation: transformAboutPhoto;
     animation-timeline: view();
 }
 
 @keyframes transformAboutPhoto {
-    0% {
+    00% {
         
         
-        transform: translate(0px, 0px);
+        transform: translate(-700px, 0px);
     }100% {
        
        
         transform: translate(1980px, -10px);
     }
-}
+} */
 
 @media (min-width: 2560px){
   .container, .hero-inner, .header-inner {
@@ -690,7 +690,7 @@ body{
   }
 }
 
-.about-photo img{
+/* .about-photo img{
     animation: transformAboutPhoto;
     animation-timeline: view();
 }
@@ -705,4 +705,4 @@ body{
        
         transform: translate(2560px, -10px);
     }
-}
+} */
