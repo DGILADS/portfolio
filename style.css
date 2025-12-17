@@ -589,7 +589,7 @@ body{
     }40%, 60% {
         opacity: 1;
         filter: blur(0px);
-        transform: translate(110px, -10px);
+        transform: translate(110px, 0px);
     }100% {
         opacity: 0;
         filter: blur(30px);
@@ -606,11 +606,11 @@ body{
     0% {
         
         
-        transform: translate(-300px, 0px);
+        transform: translate(-300px, -10px);
     }100% {
        
        
-        transform: translate(300px, -10px);
+        transform: translate(300px, 0px);
     }
 }
 
