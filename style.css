@@ -65,20 +65,18 @@
 
 /* Container Modal */
 
+
 .modal{
+  width: calc(420px * var(--scale));
+  padding: calc(36px * var(--scale));
+  border-radius: calc(18px * var(--scale));
   background: linear-gradient(
     180deg,
     rgba(255,255,255,0.04),
-    rgba(255,255,255,0.01)
+    rgba(255,255,255,0.02)
   );
-  border-radius: 18px;
-  padding: 48px 40px;
-  width: min(90%, 420px);
-
-  text-align: center;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
-  border: 1px solid rgba(255,255,255,0.06);
-
+  text-align:center;
+  box-shadow: 0 40px 120px rgba(0,0,0,0.7);
   animation: modalIn .6s ease;
 }
 
@@ -148,14 +146,16 @@
 
 .modal h2{
   font-family: var(--brand-font);
-  font-size: 26px;
-  margin-bottom: 14px;
+  font-size: calc(26px * var(--scale));
+  margin-bottom: calc(14px * var(--scale));
+  letter-spacing: .4px;
 }
 
 .modal p{
+  font-size: calc(16px * var(--scale));
   color: var(--muted);
-  font-size: 15px;
-  margin-bottom: 28px;
+  margin-bottom: calc(24px * var(--scale));
+
 }
 
 /* Modal Button */
@@ -941,6 +941,9 @@ body{
   }
   .hero-right{
     width: 380px;
+  }
+  .modal h2{
+    font-size: calc(30px * var(--scale));
   }
   
 }
