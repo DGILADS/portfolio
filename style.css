@@ -432,17 +432,17 @@ body{
 
 .skill-card:hover{
     border-color:#dd0b0e;
-    box-shadow: 0 10px 32px rgba(221,11,14,0.35);
+    /* box-shadow: 0 10px 32px rgba(221,11,14,0.35); */
     transform: translateY(-4px);
 }
 
 /*Keybord focus for accessibility*/
 
-.skill-card:hover{
+.skill-card:focus-visible{
     border-color:#dd0b0e;
-    box-shadow: 0 10px 32px rgba(221,11,14,0.35);
-    transform: translateY(-4px);
+    outline:none;
 }
+
 
 
 .skill-card h3{
@@ -555,7 +555,7 @@ body{
 }
 
 .contact-card a{
-    color:var(--white);
+    color:var(--white--);
     text-decoration:none;
 }
 
