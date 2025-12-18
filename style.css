@@ -395,7 +395,7 @@ body{
 }
 
 .skill-icons .skill-icon:hover{
-    transform: scale(1.15);
+    transform: scale(2.15);
     opacity: 1;
 }
 
@@ -449,8 +449,26 @@ body{
     border-radius:14px;overflow:hidden;
     width:340px;
     box-shadow:var(--shadow);
-    transition:transform .22s;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    
+    will-change: transform;
 }
+
+
+.project:hover{
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.32);
+}
+ /* disable hover effects on touch devices */
+@media (hover: none){
+    .project:hover{
+        transform: none;
+        box-shadow: var(--shadow);
+    }
+}
+
 
 .project img{
     width:100%;
