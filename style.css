@@ -408,11 +408,42 @@ body{
 
 
 .skill-card{
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.01)
+    );
+    padding:18px;
     border-radius:12px;
     width:320px;
+
+    /* Borda invisível inicial */
+    border:1px solid transparent;
+
     box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+
+    will-change: transform;
 }
+
+.skill-card:hover{
+    border-color:#dd0b0e;
+    box-shadow: 0 10px 32px rgba(221,11,14,0.35);
+    transform: translateY(-4px);
+}
+
+/*Keybord focus for accessibility*/
+
+.skill-card:hover{
+    border-color:#dd0b0e;
+    box-shadow: 0 10px 32px rgba(221,11,14,0.35);
+    transform: translateY(-4px);
+}
+
 
 .skill-card h3{
     font-family:var(--brand-font);
