@@ -716,6 +716,22 @@ body {
   font-weight: 700;
 }
 
+.project-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.project-actions .btn,
+.project-actions .btn-outline {
+  padding: 8px 16px;
+  font-size: 14px;
+  flex: 1;
+  text-align: center;
+  min-width: fit-content;
+}
+
 /* ============================ */
 /*         CONTACT AREA         */
 /* ============================ */
